@@ -15,13 +15,14 @@ resource "google_app_engine_standard_app_version" "frontend" {
 
   deployment {
     zip {
-      source_url = "https://storage.googleapis.com/${google_storage_bucket.harbour_static_bucket.name}/${google_storage_bucket_object.www.name}"
+      source_url = "https://storage.googleapis.com/${google_storage_bucket.harbour_static_bucket.name}/${google_storage_bucket_object.frontend.name}"
     }
   }
 
   env_variables = {
     port = "8080"
   }
+
 }
 
 

@@ -3,10 +3,17 @@ variable "project_id" {
   type        = string
 }
 
-variable "static_source" {
-  description = "Static content source"
+variable "frontend_source" {
+  description = "Frontend static content source"
   type        = string
 }
+
+variable "backend_source" {
+  description = "Backend source"
+  type        = string
+}
+
+
 
 variable "region" {
   description = "Google Cloud region"
